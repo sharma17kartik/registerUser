@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-toolbar style="text-align:center; margin: auto;">Sign Up</mat-toolbar>
+
+  <form (submit)="onAddUser(userForm)" #userForm="ngForm">
+
+    <mat-form-field [style.width.%]="100" appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" ngModel name="name" #name="ngModel" placeholder="Name" required>
+      <mat-error *ngIf="name.invalid">Name Incorrect</mat-error>
+    </mat-form-field>
+
+    <br />
+    <mat-form-field [style.width.%]="100" appearance="outline">
+      <mat-label>Your Email/Username</mat-label>
+      <input matInput type="email" ngModel name="email" #email="ngModel" placeholder="Email Address" required>
+      <mat-error *ngIf="email.invalid">Enter Valid Email</mat-error>
+    </mat-form-field>
+
+    <br />
+    <mat-form-field [style.width.%]="100" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" ngModel name="password" #password="ngModel" placeholder="Password" required>
+      <mat-error *ngIf="password.invalid">Enter Valid Password</mat-error>
+    </mat-form-field>
+
+    <br />
+    <mat-checkbox color='primary'>Remember Me</mat-checkbox>
+    <!-- <button style="float: right;" mat-button color='primary'>Forget Password</button> -->
+    <br /><br />
+
+    <button color="primary" class="btn" color="warn" type="submit" mat-raised-button>Create Account</button>
+  </form>
+</mat-card>
+
+
+<!-- <mat-accordion multi="true" *ngIf="posts.length > 0">
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      {{ post.name }}
+    </mat-expansion-panel-header>
+    <p>{{ post.email }}</p>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">No posts added yet!</p> -->

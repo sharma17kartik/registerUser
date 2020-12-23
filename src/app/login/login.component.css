@@ -1,0 +1,10 @@
+.btn {
+  width: 100%;
+}
+mat-toolbar {
+  width: 100%;
+  justify-content: center;
+}
+mat-card {
+  height: 410px;
+}

@@ -1,0 +1,10 @@
+mat-card {
+  display: inline;
+  display: block;
+  margin: auto;
+  position: static;
+  height: 400;
+}
+button {
+  margin: 10px;
+}

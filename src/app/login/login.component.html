@@ -1,0 +1,31 @@
+<mat-card>
+
+  <mat-toolbar>Login</mat-toolbar>
+<div><br/><br />
+  <form (submit)="(userForm)" #userForm="ngForm">
+    <br />
+
+    <mat-form-field [style.width.%]="100" appearance="outline">
+      <mat-label>Your Email/Username</mat-label>
+      <input matInput type="text" ngModel name="name" #name="ngModel" placeholder="Name" required>
+      <mat-error *ngIf="name.invalid">User Already Exist</mat-error>
+      </mat-form-field>
+
+    <br />
+    <mat-form-field [style.width.%]="100" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" ngModel name="password" #password="ngModel" placeholder="Password" required>
+      <mat-error *ngIf="password.invalid">Enter Valid Password</mat-error>
+      </mat-form-field>
+
+    <br /><br /><br />
+    <mat-checkbox color='primary'>Remember Me</mat-checkbox>
+    <button style="float: right;" mat-button color='primary'>Forget Password</button>
+    <br />
+
+    <button color="primary" color="warn" class="btn" type="submit" mat-raised-button>Login</button>
+
+  </form>
+  </div>
+</mat-card>
+
